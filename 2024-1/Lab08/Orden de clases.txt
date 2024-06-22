@@ -1,0 +1,11 @@
+Biblioteca:
+	carga(); //for
+	llena(); // for
+	baja(); for
+	muestra(); // for
+	Estante:
+		
+		Lista:
+			Nodo:
+				Libro:  
+					Enciclopedia, Revista, Novela

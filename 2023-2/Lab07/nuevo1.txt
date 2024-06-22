@@ -1,0 +1,16 @@
+int altura(nodoArbol *nodo){
+	if (nodoArbol == nullptr) return 0;
+	if (nodoArbol.izq == nullptr and nodoArbol.der == nullptr) return 0;
+	else return 1 + altura(nodoArbol.izq) + altura(nodoArbol.der);
+}
+
+int calcularNodos(nodoArbol *nodo){
+	if (nodo == nullptr) return 0;
+	else return 1 + calcularNodos(nodo.izq) + calcularNodos(nodo.der);
+}
+
+struct Nodo *buscarRaiz(struct Nodo *raiz, int dato){
+	if (raiz == nullptr or raiz.elemento == dato) return raiz;
+	if (raiz.elemento < dato) return buscarRaiz(raiz.izq, dato);
+	else return buscarRaiz(raiz.der, dato);
+}
